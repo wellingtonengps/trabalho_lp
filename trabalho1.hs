@@ -1,15 +1,12 @@
 import System.IO
-import Data.Time.Clock.POSIX (getPOSIXTime)
+import System.Random
 
 type Die = Int
 type Dice = [Die]
 
 -- Função para gerar um número pseudo-aleatório entre 1 e 6
 rollDie :: IO Die
-rollDie = do
-  currentTime <- round `fmap` getPOSIXTime
-  let randomNum = (currentTime `mod` 6) + 1
-  return randomNum
+rollDie = getStdRandom (randomR (1, 6)) :: IO Die
 
 -- Função para sortear a configuração inicial dos dados
 initialDice :: Int -> IO Dice
