@@ -1,3 +1,6 @@
+-- Celso Zacarias da Silva Junior - 202076003 
+-- Wellington Pereira Silva - 201935041
+
 -- import System.IO
 import System.Random
 
