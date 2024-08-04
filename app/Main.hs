@@ -136,7 +136,7 @@ jogadaJogador action mesa = do
         then do
           return (rotacionaDadoDaMesa m dado face)
         else do
-          putStrLn "Dado inválido"
+          putStrLn "Face inválida"
           jogadaJogador action mesa
 
 -- Função para escolher uma face aleatória dos lados disponíveis
